@@ -1,0 +1,28 @@
+li {
+  cursor: pointer;
+}
+.table-responsive {
+  overflow : scroll!important;
+  height   : 300px;
+}
+.title {
+  text-decoration      : underline;
+  text-decoration-color: #FFFCF5;
+}
+i.BTC  {color: #F1F2D7;}
+i.BCH  {color: #E8EED9;}
+i.LTC  {color: #D0E2CF;}
+i.ETH  {color: #B9DAC0;}
+i.XRP  {color: #C3E2D6;}
+i.USDT {color: #AED8C8;}
+input.BTC  {background-color: #F1F2D7;}
+input.BCH  {background-color: #E8EED9;}
+input.LTC  {background-color: #D0E2CF;}
+input.ETH  {background-color: #B9DAC0;}
+input.XRP  {background-color: #C3E2D6;}
+input.USDT {background-color: #AED8C8;}
+@media (min-width: 992px) {
+  .navbar {
+    display: none!important;
+  }
+}

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Remitano Bot Dashboard</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="assets/css/app.css" rel="stylesheet" />
+
+</head>
+
+<body style="display:none;">
+    <div class="container-fluid login" style="margin-top:3em;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="content">
+                        <form style="padding:2em;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control border-input" placeholder="password" value="" required="true" pattern="\w+">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center" style="margin-bottom:1em;">
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Login</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="wrapper app hide">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+            <div class="sidebar-wrapper">
+                <div class="logo">Remitano Bot Dashboard<br>
+                    <sm style="font-size:10px;font-weight:bold;">Last Update: <span class="update" style="text-transform:capitalize;"></span></sm>
+                </div>
+                <ul class="nav">
+                    <li class="active"><a><i class="ti-settings"></i><p>Bot Settings</p></a></li>
+                    <li><a><i class="cc BTC"></i><p>Bitcoin</p></a></li>
+                   <!-- <li><a><i class="cc BCH"></i><p>Bitcoin Cash</p></a></li>
+                    <li><a><i class="cc LTC"></i><p>Litecoin</p></a></li>
+                    <li><a><i class="cc ETH"></i><p>Ethereum</p></a></li>
+                    <li><a><i class="cc XRP"></i><p>Ripple</p></a></li>-->
+                    <li><a><i class="cc USDT"></i><p>Tether USDT</p></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+          </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="content settings">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Edit Settings</h4>
+                                </div>
+                                <div class="content">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input type="text" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Remitano Email</label>
+                                                    <input type="text" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Failsafe price</label>
+                                                    <input type="number" step="0.001" value="" class="form-control border-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Minimum Sell Trades</label>
+                                                    <input type="number" step="0.001" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Last Online Within</label>
+                                                    <input type="number" step="1" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Minimum Score</label>
+                                                    <input type="number" step="0.001" class="form-control border-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Minimum Buy Fiat</label>
+                                                    <input type="number" step="1" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Minimum Sell Fiat</label>
+                                                    <input type="number" step="1" class="form-control border-input" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row">-->
+                                        <!--    <div class="col-md-3">-->
+                                        <!--        <div class="form-group">-->
+                                        <!--            <label>Offer Bank</label>-->
+                                        <!--            <select class="form-control border-input">-->
+                                        <!--              <option value="UOB">UOB</option>-->
+                                        <!--              <option value="Affin">Affin Bank</option>-->
+                                        <!--              <option value="Rajhi">Al Rajhi Bank</option>-->
+                                        <!--              <option value="HSBC">HSBC</option>-->
+                                        <!--              <option value="Islam">Bank Islam</option>-->
+                                        <!--              <option value="BSN">BSN</option>-->
+                                        <!--              <option value="Maybank">Maybank</option>-->
+                                        <!--              <option value="CIMB">CIMB</option>-->
+                                        <!--              <option value="Berhad">Public Bank Berhad</option>-->
+                                        <!--              <option value="RHB">RHB Bank</option>-->
+                                        <!--              <option value="Leong">Hong Leong Bank</option>-->
+                                        <!--              <option value="Alliance">Alliance Bank</option>-->
+                                        <!--              <option value="Ambank">Ambank</option>-->
+                                        <!--              <option value="Rakyat">Rakyat</option>-->
+                                        <!--              <option value="Standard">Standard Chartered</option>-->
+                                        <!--            </select>-->
+                                        <!--        </div>-->
+                                        <!--    </div>-->
+                                        <!--    <div class="col-md-3">-->
+                                        <!--        <div class="form-group">-->
+                                        <!--            <label>Bank Account Number</label>-->
+                                        <!--            <input type="number" step="1" class="form-control border-input">-->
+                                        <!--        </div>-->
+                                        <!--    </div>-->
+                                        <!--    <div class="col-md-3">-->
+                                        <!--        <div class="form-group">-->
+                                        <!--            <label>Bank Account Name</label>-->
+                                        <!--            <input type="text" class="form-control border-input" value="">-->
+                                        <!--        </div>-->
+                                        <!--    </div>-->
+                                        <!--    <div class="col-md-3">-->
+                                        <!--        <div class="form-group">-->
+                                        <!--            <label>&nbsp;</label>-->
+                                        <!--            <input type="text" class="form-control border-input" disabled="true">-->
+                                        <!--        </div>-->
+                                        <!--    </div>-->
+                                        <!--</div>-->
+                                        <div class="coin-settings"></div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Blacklist</label>
+                                                    <textarea rows="5" class="form-control border-input" placeholder="Comma separate values" value=""></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center" style="margin-bottom:3em;">
+                                            <button type="submit" class="btn btn-info btn-fill btn-wd">Update Settings</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content table hide">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card tsell">
+                                <div class="header">
+                                    <h4 class="title">Sell Competitors</h4>
+                                </div>
+                                <div class="content table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>User</th>
+                                            <th>Price</th>
+                                            <th>Max Amount</th>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card tbuy">
+                                <div class="header">
+                                    <h4 class="title">Buy Competitors</h4>
+                                </div>
+                                <div class="content table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>User</th>
+                                            <th>Price</th>
+                                            <th>Max Amount</th>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card tads">
+                                <div class="header">
+                                    <h4 class="title">My Ads</h4>
+                                </div>
+                                <div class="content table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>Type</th>
+                                            <th>Price</th>
+                                            <th>Offer</th>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card tstats">
+                                <div class="header">
+                                    <h4 class="title">Calculated Stats</h4>
+                                </div>
+                                <div class="content table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>Stat</th>
+                                            <th>Value</th>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/paper-dashboard.js"></script>
+<script src="assets/js/app.js"></script>
+
+</html>
